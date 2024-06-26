@@ -27,6 +27,8 @@ btnForm.addEventListener('click', function(evt) {
     
     if(name != '' && email != '' && phone != '' && interest != '')
         Modal()
+    else
+        window.alert('Todos os campos devem estar preenchidos!')
 })
 
 // função para fechar o modal ao clicar fora dele ou no botão de fechar
