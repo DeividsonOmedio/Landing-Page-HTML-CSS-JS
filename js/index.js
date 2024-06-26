@@ -24,7 +24,9 @@ btnForm.addEventListener('click', function(evt) {
     
     nameModal = document.querySelector('#name-modal')
     nameModal.innerHTML = name
-    Modal()
+    
+    if(name != '' && email != '' && phone != '' && interest != '')
+        Modal()
 })
 
 // função para fechar o modal ao clicar fora dele ou no botão de fechar
