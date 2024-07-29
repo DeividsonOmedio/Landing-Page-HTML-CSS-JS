@@ -1,0 +1,29 @@
+body {
+    background-color: #ff9800 !important;
+    color: #fff !important;
+    text-align: center !important;
+    padding: 10px !important;
+}
+
+#home {
+    border-radius: 0;
+    text-decoration: none;
+    color: #fff;
+    background-color: darkgray;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#home:hover {
+    filter: brightness(.8);
+    transition: all 0.3s ease;
+}
+
+h2 {
+    padding: 10px 0;
+}
+
+table {
+    border-radius: 10px;
+}
