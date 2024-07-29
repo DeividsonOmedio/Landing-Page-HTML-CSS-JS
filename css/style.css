@@ -1,7 +1,7 @@
 :root {
     --primary: #eb1ccc;
-    --secondy: #95989A;
-    --secondy-opacity: #95989aab;
+    --secondy: #ff9800;
+        --secondy-opacity: #ec9108f6;
     --text-color: #fff;
     --text-secondary: #000;
     --text-tertiary: #353535;
@@ -13,6 +13,25 @@
     font-family: "Montserrat";
 }
 
+body {
+    background-image: linear-gradient(45deg, black, transparent);
+    color: #fff;
+}
+
+#dashboard {
+    border-radius: 0;
+    text-decoration: none;
+    color: #fff;
+    background-color: darkgray;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#dashboard:hover {
+    filter: brightness(.8);
+    transition: all 0.3s ease;
+}
 #event-description {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
         url(../img/hrz-5.jpg);
@@ -93,8 +112,8 @@
     background-color: var(--primary);
     color: var(--text-color);
     text-transform: uppercase;
-    width: 100%;
     border: none;
+    width: 100%;
     padding: 12px;
     cursor: pointer;
     opacity: 0.8;
@@ -104,6 +123,16 @@
     opacity: 1;
 }
 
+#btn-inscricao {
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 5px 5px black;
+
+}
+
+#btn-solicitar {
+    background-color: var(--primary);
+}
 /*Benefit-sectioin*/
 
 #key-benefits h2 {
@@ -274,13 +303,63 @@
     font-size: 1.2em;
 }
 
+.font-cursive {
+    font-family: cursive;
+}
+
+#comments-section {
+    width: 90%;
+    padding: 1% 11%;
+    color: var(--text-color);
+}
+
+#h3-comentario {
+    padding: 1% 11%;
+}
+
+#comments-form-section {
+    width: 90%;
+    margin: auto;
+    border: 11px double #000;
+    padding: 5%;
+    border-radius: 10px;
+    box-shadow: 2px -1px 5px -1px black;
+    color: var(--text-color);
+}
+
+#comments-form input {
+    border: 1px solid;
+}
+
+#comments-form input::placeholder {
+    font-size: small;
+}
+
+#comments-form label {
+    color: var(--text-color);
+}
+
+#btn-comentar {
+    background-color: var(--secondy-opacity);
+    color: var(--text-color);
+    width: 50%;
+    margin-left: 50%;
+    margin-top: 10px;
+}
+
+
+textarea {
+    max-height: 500px;
+    padding: 1%;
+    resize: none;
+}
 footer {
     text-align: center;
-    color: var(--secondy);
     height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: var(--text-color);
 }
 
 footer h3 {
@@ -312,14 +391,25 @@ footer span {
 }
 
 #modal-content {
-    background-color: #fefefe;
     margin: 15% auto;
     padding: 20px 60px;
-    border: 1px solid #888;
     width: 60%;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    background-color: #000;
+        color: #fff;
+        border-radius: 30px 30px 30px 30px;
+    }
+    
+    #modal-content button {
+        color: #fff;
+        background-color: var(--secondy);
+        border: 1px solid;
+    }
+    
+    #modal-content button:hover {
+        filter: brightness(1.1);
 }
 
 .focus-effect {
@@ -441,5 +531,6 @@ footer span {
 
         width: 80%;
     }
+
 
 }

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
@@ -17,6 +19,7 @@
 </head>
 
 <body>
+    <a href="dashboard.html" class="btn-secondary" id="dashboard">Dashboard</a>
     <header id="event-description">
         <div id="disclainer">
             <h2>Indecor</h2>
@@ -53,7 +56,7 @@
                         <option value="other">Outros</option>
                     </select>
                 </div>
-                <input type="submit" class="btn" value="Quero me inscrever">
+                <input type="submit" class="btn" id="btn-inscricao" value="Quero me inscrever">
             </form>
         </div>
     </header>
@@ -126,8 +129,30 @@
     </section>
     <section id="cta">
         <h3>Gostou? Então se inscreva:</h3>
-        <button class="btn" onclick="Inscription()">Solicitar Inscrição</button>
-    </section>
+        <button class="btn" id="btn-solicitar" onclick="Inscription()">Solicitar Inscrição</button>
+        </section>
+        <h3 class="font-cursive text-light" id="h3-comentario">Comentários</h3>
+        <!-- Seção de comentários -->
+        <section id="comments-section">
+            <!-- Os comentários serão adicionados dinamicamente aqui -->
+        </section>
+        
+        <!-- Formulário para enviar novos comentários -->
+        <section id="comments-form-section">
+            <h3 class="font-cursive">Deixe seu comentário</h3>
+            <form id="comments-form">
+                <div class="form-group">
+                    <label for="comment-name">Nome</label>
+                    <input type="text" name="comment-name" placeholder="Digite seu nome" autofocus required>
+                </div>
+                <div class="form-group">
+                    <label for="comment-text">Comentário</label>
+                    <textarea name="comment-text" placeholder="Digite seu comentário" autofocus required></textarea>
+                </div>
+                <button type="submit" class="btn" id="btn-comentar">Enviar Comentário</button>
+            </form>
+        </section>
+
     <footer>
         <h3>Indecor</h3>
         <p>A evolução da decoração de interiores</p>
