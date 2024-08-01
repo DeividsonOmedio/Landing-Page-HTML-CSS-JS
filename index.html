@@ -29,12 +29,12 @@
             <p>
                 Data do evento
             </p>
-            <p class="event-date">Domingo, 30 de Junho, a partir das 14h</p>
+            <p class="event-date">Domingo, 30 de Agosto, a partir das 14h</p>
         </div>
-        <div id="subscription-form">
+        <section id="form">
             <p>Preencha o formulário para receber os detalhes do evento</p>
-            <form>
-                <div class="form-group">
+            <form id="subscription-form">
+                <div class="form-group w-100">
                     <label for="name">Nome</label>
                     <input type="text" name="name" placeholder="Digite seu nome" required>
                 </div>
@@ -44,10 +44,10 @@
                 </div>
                 <div class="form-group">
                     <label for="phone">Telefone</label>
-                    <input type="text" name="phone" placeholder="Número de whatssap" required>
+                    <input type="tel" name="phone" placeholder="Número de whatssap" pattern="\d{10,11}" required>
                 </div>
                 <div class="form-group">
-                    <label for="interest">Pricipal interesse</label>
+                    <label for="interest">Principal interesse</label>
                     <select name="interest" required>
                         <option value="" disabled selected>Selecione</option>
                         <option value="apartament">Apartamento</option>
@@ -58,7 +58,7 @@
                 </div>
                 <input type="submit" class="btn" id="btn-inscricao" value="Quero me inscrever">
             </form>
-        </div>
+        </section>
     </header>
     <section id="key-benefits">
         <h2>O que você vai aprender</h2>
@@ -134,40 +134,42 @@
         <h3 class="font-cursive text-light" id="h3-comentario">Comentários</h3>
         <!-- Seção de comentários -->
         <section id="comments-section">
-            <!-- Os comentários serão adicionados dinamicamente aqui -->
+            <!-- Os comentários serão adicionadosaqui -->
         </section>
         
-        <!-- Formulário para enviar novos comentários -->
-        <section id="comments-form-section">
-            <h3 class="font-cursive">Deixe seu comentário</h3>
-            <form id="comments-form">
-                <div class="form-group">
-                    <label for="comment-name">Nome</label>
-                    <input type="text" name="comment-name" placeholder="Digite seu nome" autofocus required>
-                </div>
-                <div class="form-group">
-                    <label for="comment-text">Comentário</label>
-                    <textarea name="comment-text" placeholder="Digite seu comentário" autofocus required></textarea>
-                </div>
-                <button type="submit" class="btn" id="btn-comentar">Enviar Comentário</button>
-            </form>
-        </section>
+       <!-- Formulário para enviar novos comentários -->
+<section id="comments-form-section">
+    <h3 class="font-cursive">Deixe seu comentário</h3>
+    <form id="comments-form">
+        <div class="form-group">
+            <label for="comment-name">Nome</label>
+            <input type="text" name="comment-name" placeholder="Digite seu nome" required>
+        </div>
+        <div class="form-group">
+            <label for="comment-text">Comentário</label>
+            <textarea name="comment-text" placeholder="Digite seu comentário" required></textarea>
+        </div>
+        <button type="submit" class="btn" id="btn-comentar">Enviar Comentário</button>
+    </form>
+</section>
+
 
     <footer>
         <h3>Indecor</h3>
         <p>A evolução da decoração de interiores</p>
-        <p><span>Entre em contato:</span>oi@indecor.com.br</p>
-        <p><span>Ou por telefone:</span>(31)999999999</p>
+        <p><span>Entre em contato:</span> sac@indecor.com.br</p>
+        <p><span>Ou por telefone:</span> (31)999999999</p>
     </footer>
 
     <section id="modal">
         <div id="modal-content">
-            <h2>Parabéns <span id="name-modal"></span> !</h2>
-            <p>Você está inscrito no evento</p>
+            <h2 id="modal-title">Parabéns <span id="name-modal">teste</span>!</h2>
+            <p id="modal-message">Você está inscrito no evento</p>
             <p>Em breve você receberá um e-mail com mais detalhes</p>
-            <button class="btn">Fechar</button>
+            <button class="btn" onclick="Modal()">Fechar</button>
         </div>
     </section>
+    
 </body>
 
 </html>

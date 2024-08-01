@@ -71,7 +71,7 @@ body {
     font-weight: bold;
 }
 
-#subscription-form {
+#form {
     background-color: var(--secondy-opacity);
     margin-top: 4%;
     padding: 0.5em;
@@ -531,6 +531,18 @@ footer span {
 
         width: 80%;
     }
+    #form {
+        max-width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        margin-bottom: 3%;
+        align-items: center;
+    }
 
+    #modal-content {
+        width: 95%;   
+    }
 
 }
