@@ -10,6 +10,7 @@ const sectionForm = document.querySelector('#form')
 const subscriptionForm = document.querySelector('#subscription-form')
 const commentsSection = document.querySelector('#comments-section')
 const commentsForm = document.querySelector('#comments-form')
+
 // Função para abrir/fechar modal com mensagem personalizada
 function Modal(message = '', title = 'Parabéns') {
     if (message) {
@@ -40,7 +41,7 @@ subscriptionForm.addEventListener('submit', function (evt) {
     setLocalStorage('incricoes', incricoes)
 
     Modal('Você está inscrito no evento! Em breve você receberá um e-mail com mais detalhes.', `Parabéns ${newIncricao.name}`) // Abrir o modal com mensagem de inscrição
-    subscriptionForm.reset() // Limpar o formulário após o sucesso da inscrição
+    subscriptionForm.reset()
 })
 
 // Função para fechar o modal ao clicar fora dele ou no botão de fechar
@@ -113,9 +114,3 @@ commentsForm.addEventListener('submit', function (evt) {
     Modal('Seu comentário foi enviado para aprovação!', 'Obrigado')
     commentsForm.reset()
 })
-
-// Garantir que a página carregue no topo
-// window.onload = function () {
-//     window.scrollTo(0, 0)
-// }
-
